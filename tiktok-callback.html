@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TikTok-Verbindung – Malik Enterprises</title>
+<style>
+body{margin:0;background:#faf9f6;color:#1d2433;font:16px/1.65 "Segoe UI",system-ui,sans-serif}
+main{max-width:620px;margin:0 auto;padding:56px 22px;text-align:center}
+h1{font-size:1.5rem}
+.code{background:#ffffff;border:2px solid #2e6e5e;border-radius:10px;padding:18px;margin:22px 0;
+      font:600 1.05rem/1.4 Consolas,monospace;word-break:break-all;user-select:all}
+button{background:#2e6e5e;color:#fff;border:none;border-radius:8px;padding:12px 22px;
+       font:600 1rem "Segoe UI",sans-serif;cursor:pointer}
+.matt{color:#5b6472;font-size:.92rem}
+.fehler{color:#a33;font-weight:600}
+</style></head>
+<body><main>
+<h1>TikTok-Verbindung</h1>
+<div id="inhalt"><p class="matt">Einen Moment …</p></div>
+<script>
+// Diese Seite ist das Ziel der TikTok-Anmeldung (Redirect URI). TikTok haengt
+// einen einmaligen Bestaetigungscode an die Adresse; die Seite zeigt ihn nur
+// an, damit der Betreiber ihn in seine Betreiberzentrale einfuegen kann.
+// Es wird nichts gespeichert und nichts irgendwohin gesendet.
+const p = new URLSearchParams(location.search);
+const code = p.get("code");
+const fehler = p.get("error");
+const ziel = document.getElementById("inhalt");
+if (code) {
+  ziel.innerHTML = '<p>Anmeldung erfolgreich. Kopiere diesen Code und füge ihn in der '
+    + 'SYNERGIA-Betreiberzentrale im Feld „TikTok-Code" ein:</p>'
+    + '<div class="code" id="c"></div>'
+    + '<button onclick="navigator.clipboard.writeText(document.getElementById(\'c\').textContent).then(()=>this.textContent=\'Kopiert ✓\')">Code kopieren</button>'
+    + '<p class="matt">Der Code ist nur wenige Minuten gültig und nur einmal verwendbar.</p>';
+  document.getElementById("c").textContent = code;
+} else if (fehler) {
+  ziel.innerHTML = '<p class="fehler">TikTok meldet: ' + fehler.replace(/[<>]/g, "")
+    + '</p><p class="matt">' + (p.get("error_description") || "").replace(/[<>]/g, "")
+    + '</p><p><a href="/">Zurück zur Startseite</a></p>';
+} else {
+  ziel.innerHTML = '<p class="matt">Diese Seite wird von der TikTok-Anmeldung automatisch '
+    + 'aufgerufen. Direkt geöffnet zeigt sie nichts an.</p><p><a href="/">Zur Startseite</a></p>';
+}
+</script>
+</main></body></html>
