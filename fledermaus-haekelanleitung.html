@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fledermaus Rubi – Häkelanleitung – Malik Enterprises</title>
-<meta name="description" content="Kostenlose Amigurumi-Häkelanleitung: Fledermaus Rubi in Schwarz mit roten Akzenten – Schritt für Schritt mit Maschenzahlen, Skizzen, Runden-Checkliste und PDF zum Herunterladen. Genau richtig für Halloween.">
+<meta name="description" content="Kostenlose Amigurumi-Häkelanleitung: Fledermaus Rubi, schwarz mit roten Flügeln, roten Ohren und einem Mond auf dem Bauch. In Häkelschrift, Runde für Runde mit Maschenzahlen, Foto, Skizzen, Runden-Checkliste und PDF.">
 <meta name="theme-color" content="#0e0c12">
 <style>
   :root{
@@ -13,8 +13,8 @@
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;background:var(--grund);color:var(--tinte);font:16px/1.65 "Segoe UI",system-ui,-apple-system,sans-serif}
-  main{max-width:780px;margin:0 auto;padding:30px 22px 60px}
+  body{margin:0;background:var(--grund);color:var(--tinte);font:16px/1.65 "Segoe UI","Liberation Sans",system-ui,-apple-system,sans-serif}
+  main{max-width:780px;margin:0 auto;padding:34px 22px 60px}
   h1{font-size:2.15rem;line-height:1.15;margin:0 0 6px;letter-spacing:-.01em;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
   h1 svg{width:46px;height:auto;flex:none}
   h2{font-size:1rem;margin:42px 0 12px;color:var(--rot-hell);text-transform:uppercase;letter-spacing:.08em}
@@ -30,30 +30,11 @@
   .matt{color:var(--matt)}
   .klein{font-size:.9rem}
 
-  /* Laufschrift */
-  .laufschrift{position:relative;overflow:hidden;background:var(--rot);color:#fff;white-space:nowrap}
-  .laufschrift.oben{border-bottom:1px solid var(--rot-dunkel)}
-  .laufschrift.unten{border-top:1px solid var(--rot-dunkel)}
-  .spur{display:inline-flex;will-change:transform;animation:laufen 34s linear infinite}
-  .laufschrift.unten .spur{animation-duration:28s;animation-direction:reverse}
-  .spur span{display:inline-block;padding:9px 0;font-weight:600;letter-spacing:.02em;font-size:.97rem}
-  .spur i{font-style:normal;opacity:.7;padding:0 .95em}
-  @keyframes laufen{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  .laufschrift:hover .spur,.laufschrift.pause .spur{animation-play-state:paused}
-  .laufschrift button{position:absolute;right:0;top:0;height:100%;padding:0 12px 0 26px;border:0;cursor:pointer;color:#fff;
-    background:linear-gradient(90deg,rgba(215,38,61,0),var(--rot) 40%);font:700 .8rem/1 system-ui,sans-serif;letter-spacing:.04em}
-  .laufschrift button:focus-visible{outline:2px solid #fff;outline-offset:-4px}
-  @media (prefers-reduced-motion:reduce){
-    .spur{animation:none;display:block;white-space:normal;text-align:center}
-    .spur span+span{display:none}
-    .laufschrift button{display:none}
-  }
-
-  /* Vorstellung */
-  .vorstellung{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;align-items:center}
-  .vorstellung svg{width:100%;height:auto;display:block}
-  @media (max-width:640px){.vorstellung{grid-template-columns:1fr}}
-  .steckbrief{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.95rem}
+  /* Vorstellung mit Foto */
+  .vorstellung{display:grid;grid-template-columns:minmax(0,290px) 1fr;gap:22px;align-items:start}
+  .vorstellung img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--linie)}
+  @media (max-width:640px){.vorstellung{grid-template-columns:1fr}.vorstellung img{max-width:360px;margin:0 auto}}
+  .steckbrief{margin:0 0 6px;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.95rem}
   .steckbrief dt{color:var(--matt);margin:0}
   .steckbrief dd{margin:0}
   .knoepfe{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 4px}
@@ -65,25 +46,24 @@
   .knopf:focus-visible{outline:2px solid var(--rot-hell);outline-offset:2px}
 
   /* Material und Abkürzungen */
-  .zweispaltig{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .zweispaltig{display:grid;grid-template-columns:1fr 1fr;gap:14px 22px}
   @media (max-width:640px){.zweispaltig{grid-template-columns:1fr}}
   table{border-collapse:collapse;width:100%;font-size:.95rem}
   th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--linie);vertical-align:top}
-  th{color:var(--matt);font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em}
   td:first-child{font-weight:700;white-space:nowrap;color:var(--rot-hell)}
   .farbe{display:inline-block;width:.85em;height:.85em;border-radius:50%;vertical-align:-.08em;margin-right:.35em;border:1px solid rgba(255,255,255,.25)}
   .farbe.schwarz{background:#111}
   .farbe.rot{background:var(--rot)}
-  .farbe.weiss{background:#f4f4f4}
 
-  /* Runden-Checkliste */
-  .teil{border-left:3px solid var(--rot);padding-left:12px;margin:14px 0 6px;color:var(--matt);font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
+  /* Runden-Checkliste (Häkelschrift) */
+  .teil{border-left:3px solid var(--rot);padding-left:12px;margin:18px 0 6px;color:var(--matt);font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
   .runden{list-style:none;margin:0 0 16px;padding:0}
   .rd{margin:0;border-bottom:1px dashed var(--linie)}
   .rd label{display:grid;grid-template-columns:22px 4.9em 1fr auto;gap:0 10px;align-items:start;padding:8px 4px;cursor:pointer}
   .rd input{width:18px;height:18px;margin:4px 0 0;accent-color:var(--rot);cursor:pointer}
   .rd b{color:var(--rot-hell);font-weight:700;white-space:nowrap}
   .rd em{font-style:normal;color:var(--matt);white-space:nowrap;font-variant-numeric:tabular-nums}
+  @media (max-width:480px){.rd label{grid-template-columns:20px 4.2em 1fr auto;gap:0 8px;font-size:.95rem}.hinweis{font-size:.92rem}}
   .rd.fertig label{color:var(--matt)}
   .rd.fertig span{text-decoration:line-through;text-decoration-color:var(--rot)}
   .hinweis{margin:0;padding:9px 4px 9px 36px;border-bottom:1px dashed var(--linie);background:var(--flaeche2);font-size:.95rem;position:relative}
@@ -97,10 +77,12 @@
   figure{margin:16px 0 6px}
   figure svg{width:100%;height:auto;display:block;background:var(--flaeche2);border-radius:10px}
   figcaption{font-size:.88rem;color:var(--matt);margin-top:8px}
-  .skizze text{font-family:"Segoe UI",system-ui,sans-serif;fill:var(--tinte)}
+  figure.ohr svg{max-width:420px;margin:0 auto}
+  .skizze text{font-family:"Segoe UI","Liberation Sans",system-ui,sans-serif;fill:var(--tinte)}
   .skizze .rotlabel{fill:var(--rot-hell)}
   .skizze .mattlabel{fill:var(--matt)}
   .skizze .linie{stroke:var(--matt)}
+  .skizze .hell{stroke:var(--tinte)}
 
   footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--linie);color:var(--matt);font-size:.85rem}
 
@@ -110,21 +92,22 @@
     :root{--grund:#fff;--flaeche:#fff;--flaeche2:#f5f1f6;--tinte:#141218;--matt:#5d5766;--linie:#cfc8d6;--rot:#b8162c;--rot-hell:#b8162c;--rot-dunkel:#8e1022}
     body{font-size:10.5pt;line-height:1.5}
     main{max-width:none;padding:0}
-    .laufschrift,.knoepfe,.zurueck,.fortschritt,.nur-web{display:none!important}
+    .knoepfe,.zurueck,.fortschritt,.nur-web{display:none!important}
     h1{font-size:22pt}
     h2{margin-top:22pt;break-after:avoid}
     h3,.teil{break-after:avoid}
     .karte{border-color:var(--linie);padding:12px 14px}
     h2+.karte{break-before:avoid}
     .karte>p:first-child,.teil{break-after:avoid}
-    .rd,.hinweis{break-inside:avoid}
+    .rd,.hinweis,tr{break-inside:avoid}
     .rd label{padding:3px 2px;grid-template-columns:14px 4.7em 1fr auto}
     .rd input{width:11px;height:11px;margin-top:4px;-webkit-appearance:none;appearance:none;border:1px solid #777;border-radius:2px;background:#fff}
     .rd input:checked{background:var(--rot)}
-    .vorstellung{grid-template-columns:1fr 1fr}
+    .vorstellung{grid-template-columns:62mm 1fr}
+    .vorstellung img{border-color:var(--linie)}
     figure{break-inside:avoid}
     figure svg{background:#fff;border:1px solid var(--linie)}
-    .platz svg{width:78%;margin:0 auto}
+    .platz svg{width:92%;margin:0 auto}
     a{color:inherit;text-decoration:none}
     .nur-druck{display:block!important}
   }
@@ -132,15 +115,6 @@
 </style>
 </head>
 <body>
-
-<div class="laufschrift oben" role="marquee" aria-label="Laufschrift mit Hinweisen zur Anleitung">
-  <div class="spur">
-    <span>🦇 Halloween-Special: Fledermaus Rubi zum Selberhäkeln<i>✦</i>Kostenlose Anleitung<i>✦</i>Schwarz mit roten Akzenten<i>✦</i>Schwierigkeit: leicht bis mittel<i>✦</i>ca. 9 cm hoch, 20 cm Flügelspannweite<i>✦</i>Als PDF herunterladen oder direkt hier häkeln und Runden abhaken<i>✦</i>Fröhliches Gruseln!<i>✦</i></span>
-    <span aria-hidden="true">🦇 Halloween-Special: Fledermaus Rubi zum Selberhäkeln<i>✦</i>Kostenlose Anleitung<i>✦</i>Schwarz mit roten Akzenten<i>✦</i>Schwierigkeit: leicht bis mittel<i>✦</i>ca. 9 cm hoch, 20 cm Flügelspannweite<i>✦</i>Als PDF herunterladen oder direkt hier häkeln und Runden abhaken<i>✦</i>Fröhliches Gruseln!<i>✦</i></span>
-  </div>
-  <button type="button" aria-label="Laufschrift anhalten" aria-pressed="false">❚❚</button>
-</div>
-
 <main>
   <a class="zurueck" href="index.html">← Zur Startseite</a>
 
@@ -148,54 +122,25 @@
     <svg viewBox="0 0 64 40" aria-hidden="true" focusable="false"><path fill="#d7263d" d="M24 2 L32 9 L40 2 L42 13 C48 10 56 8 62 10 Q52 16 54 26 Q46 24 44 32 Q38 30 36 36 L32 38 L28 36 Q26 30 20 32 Q18 24 10 26 Q12 16 2 10 C8 8 16 10 22 13 Z"/></svg>
     Fledermaus Rubi
   </h1>
-  <p class="unter">Amigurumi-Häkelanleitung in Schwarz mit roten Akzenten – genau richtig für die Halloween-Saison. Kopf und Körper werden in einem Stück gehäkelt, dazu kommen Ohren mit roten Innenohren, Flügel mit roter Zackenkante und rote Füßchen.</p>
+  <p class="unter">Häkelanleitung für eine sitzende Amigurumi-Fledermaus: schwarz, mit roten Flügeln, roten Innenohren und einem kleinen Mond auf dem Bauch. Etwa 10 cm hoch, ohne die Ohren.</p>
 
   <div class="karte vorstellung">
-    <svg viewBox="0 0 480 300" role="img" aria-labelledby="bild-titel">
-      <title id="bild-titel">Illustration der fertigen Fledermaus Rubi: schwarzer Körper, rote Innenohren, rote Zackenkanten an den Flügeln, rote Augen und Füße</title>
-      <circle cx="412" cy="64" r="44" fill="var(--flaeche2)" stroke="var(--linie)"/>
-      <g fill="var(--matt)" opacity=".55"><circle cx="60" cy="40" r="1.8"/><circle cx="120" cy="26" r="1.3"/><circle cx="330" cy="30" r="1.6"/><circle cx="450" cy="150" r="1.4"/><circle cx="30" cy="200" r="1.2"/><circle cx="380" cy="230" r="1.5"/></g>
-      <ellipse cx="240" cy="266" rx="96" ry="8" fill="var(--flaeche2)"/>
-      <!-- Ohren (hinter dem Körper) -->
-      <polygon points="194,112 198,38 234,96" fill="#1c1a22" stroke="#4a4455" stroke-width="1.5" stroke-linejoin="round"/>
-      <polygon points="286,112 282,38 246,96" fill="#1c1a22" stroke="#4a4455" stroke-width="1.5" stroke-linejoin="round"/>
-      <polygon points="201,97 203,60 221,89" fill="#d7263d"/>
-      <polygon points="279,97 277,60 259,89" fill="#d7263d"/>
-      <!-- Flügel links -->
-      <g id="fluegel">
-        <path d="M190 122 C150 92 92 76 22 84 Q70 118 58 168 Q110 172 112 212 Q160 208 170 236 L204 226 L204 150 Z" fill="#1c1a22" stroke="#4a4455" stroke-width="1.5" stroke-linejoin="round"/>
-        <path d="M190 122 L58 168 M190 122 L112 212 M190 122 L170 236" stroke="#3a3542" stroke-width="1.2" fill="none"/>
-        <path d="M22 84 Q70 118 58 168 Q110 172 112 212 Q160 208 170 236" fill="none" stroke="#d7263d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-      <!-- Flügel rechts (gespiegelt) -->
-      <use href="#fluegel" transform="translate(480 0) scale(-1 1)"/>
-      <!-- Körper -->
-      <ellipse cx="240" cy="166" rx="64" ry="80" fill="#1c1a22" stroke="#4a4455" stroke-width="1.5"/>
-      <!-- Augen mit roten Augenringen -->
-      <circle cx="216" cy="150" r="15" fill="#d7263d"/><circle cx="264" cy="150" r="15" fill="#d7263d"/>
-      <circle cx="216" cy="150" r="8" fill="#0e0c12"/><circle cx="264" cy="150" r="8" fill="#0e0c12"/>
-      <circle cx="219" cy="146" r="3" fill="#fff"/><circle cx="267" cy="146" r="3" fill="#fff"/>
-      <!-- Mund und Zähnchen -->
-      <path d="M226 186 Q240 198 254 186" fill="none" stroke="#d7263d" stroke-width="3" stroke-linecap="round"/>
-      <path d="M233 188 L236 196 L239 188 Z M241 188 L244 196 L247 188 Z" fill="#fff"/>
-      <!-- Schleife -->
-      <path d="M240 216 L222 206 L222 226 Z M240 216 L258 206 L258 226 Z" fill="#d7263d"/><circle cx="240" cy="216" r="4" fill="#a4172a"/>
-      <!-- Füße -->
-      <ellipse cx="222" cy="244" rx="10" ry="6" fill="#d7263d"/><ellipse cx="258" cy="244" rx="10" ry="6" fill="#d7263d"/>
-    </svg>
+    <img src="fledermaus-rubi.jpg" width="900" height="1350" alt="Die fertige Fledermaus Rubi: schwarzer Körper mit großem Kopf, rote Ohren mit schwarzem Rand, rote Flügel mit schwarzen Fingerlinien, ein roter Mond auf dem Bauch, dazu große Augen mit rotem Rand">
     <div>
+      <p>So sieht Rubi fertig aus. Sie wird aus einzelnen Teilen zusammengenäht: Kopf und Körper, zwei Ohren, zwei Flügel mit je einem winzigen Knubbel am Handgelenk, zwei Füße und der Mond. Der Kopf ist absichtlich größer als der Körper, das macht sie so pummelig.</p>
+      <p>Die Anleitung steht in Häkelschrift, also Runde für Runde mit den üblichen Abkürzungen. Die Maschenzahl steht am Ende jeder Zeile in eckigen Klammern. Bis auf eine einzige Reihe pro Flügel ist alles feste Masche.</p>
       <dl class="steckbrief">
-        <dt>Größe</dt><dd>ca. 9 cm hoch (ohne Ohren), ca. 20 cm Flügelspannweite</dd>
+        <dt>Größe</dt><dd>ca. 10 cm hoch ohne Ohren, ca. 13 cm mit Ohren, Flügelspannweite ca. 17 cm</dd>
         <dt>Schwierigkeit</dt><dd>leicht bis mittel</dd>
-        <dt>Zeit</dt><dd>ca. 3–4 Stunden</dd>
+        <dt>Zeit</dt><dd>5 bis 6 Stunden</dd>
         <dt>Garn</dt><dd>Baumwolle, Lauflänge 125 m / 50 g, Nadel 2,5 mm</dd>
-        <dt>Technik</dt><dd>Spiralrunden, Reihen, Farbwechsel, Stäbchen für die Zackenkante</dd>
+        <dt>Technik</dt><dd>Spiralrunden, Reihen, eine Zackenreihe, Kettmaschen auf dem Stoff</dd>
       </dl>
       <div class="knoepfe">
         <a class="knopf" href="fledermaus-haekelanleitung.pdf" download>PDF herunterladen</a>
         <button class="knopf leise" type="button" id="drucken">Drucken</button>
       </div>
-      <p class="klein matt nur-web" style="margin:10px 0 0">Online kannst du jede Runde abhaken – der Fortschritt bleibt in diesem Browser gespeichert.</p>
+      <p class="klein matt nur-web" style="margin:10px 0 0">Online kannst du jede Runde abhaken. Die Häkchen bleiben in diesem Browser gespeichert.</p>
     </div>
   </div>
 
@@ -204,14 +149,12 @@
     <div>
       <h3 style="margin-top:0">Garn und Zubehör</h3>
       <ul>
-        <li><span class="farbe schwarz"></span><b>Schwarz</b>: ca. 40 g Baumwollgarn (Lauflänge 125 m / 50 g, z. B. Catania oder vergleichbar)</li>
-        <li><span class="farbe rot"></span><b>Rot</b>: ca. 15 g desselben Garns</li>
-        <li><span class="farbe weiss"></span><b>Weiß</b>: ein kleiner Rest für die Zähnchen (optional)</li>
-        <li>Häkelnadel 2,5 mm (bei lockerer Häkelweise 2,25 mm)</li>
-        <li>2 Sicherheitsaugen 10 mm, schwarz (rote Augenringe werden gehäkelt) – oder direkt rote Sicherheitsaugen</li>
-        <li>Füllwatte, ca. 25 g</li>
+        <li><span class="farbe schwarz"></span><b>Schwarz</b>: ca. 40 g Baumwollgarn, Lauflänge 125 m / 50 g (z. B. Catania). Ein Knäuel reicht.</li>
+        <li><span class="farbe rot"></span><b>Rot</b>: ca. 20 g desselben Garns</li>
+        <li>Häkelnadel 2,5 mm. Wer locker häkelt, nimmt 2,25 mm.</li>
+        <li>2 Sicherheitsaugen 12 mm mit roter Iris. Schwarze gehen auch, dann fehlt nur der rote Schimmer.</li>
+        <li>Füllwatte, ca. 30 g</li>
         <li>Maschenmarkierer, Stopfnadel, Stecknadeln, Schere</li>
-        <li>Optional: 2 Stück Bastel- oder Blumendraht à 12 cm für stellbare Flügel</li>
       </ul>
     </div>
     <div>
@@ -223,11 +166,11 @@
         <tr><td>fM</td><td>feste Masche</td></tr>
         <tr><td>hStb</td><td>halbes Stäbchen</td></tr>
         <tr><td>Stb</td><td>Stäbchen</td></tr>
-        <tr><td>DStb</td><td>Doppelstäbchen</td></tr>
+        <tr><td>DStb</td><td>Doppelstäbchen (2 Umschläge)</td></tr>
         <tr><td>zun</td><td>Zunahme: 2 fM in dieselbe Masche</td></tr>
-        <tr><td>abn</td><td>Abnahme: 2 fM zusammen abmaschen (unsichtbar, nur vordere Maschenglieder)</td></tr>
-        <tr><td>Rd</td><td>Runde – in Spiralrunden ohne Kettmasche</td></tr>
-        <tr><td>R</td><td>Reihe – hin und her mit Wende-Luftmasche</td></tr>
+        <tr><td>abn</td><td>Abnahme: 2 fM zusammen abmaschen, unsichtbar</td></tr>
+        <tr><td>Rd</td><td>Runde, in Spiralrunden ohne Kettmasche</td></tr>
+        <tr><td>R</td><td>Reihe, hin und zurück mit Wende-Luftmasche</td></tr>
         <tr><td>(…) ×n</td><td>Klammerinhalt n-mal wiederholen</td></tr>
         <tr><td>[n]</td><td>Maschenzahl am Ende der Runde oder Reihe</td></tr>
       </table>
@@ -235,193 +178,240 @@
   </div>
 
   <div class="karte">
-    <h3 style="margin-top:0">Gut zu wissen, bevor es losgeht</h3>
-    <ul>
-      <li>Alle runden Teile werden in <b>Spiralrunden</b> gehäkelt. Markiere die erste Masche jeder Runde mit einem Maschenmarkierer.</li>
-      <li>Häkle <b>fest</b>, damit die Füllwatte später nicht durchscheint. Eine Maschenprobe ist nicht nötig – bei anderem Garn oder anderer Nadel wird Rubi einfach größer oder kleiner.</li>
-      <li><b>Farbwechsel</b>: Die letzte Masche vor dem Wechsel bis zum letzten Umschlag häkeln und diesen Umschlag schon mit der neuen Farbe durchziehen.</li>
-      <li><b>Unsichtbare Abnahme</b>: Nur in die vorderen Maschenglieder der nächsten zwei Maschen einstechen, Faden holen und beide Schlingen zusammen abmaschen.</li>
-      <li>Die Wende-Luftmasche am Reihenanfang zählt <b>nicht</b> als Masche.</li>
-      <li>Sicherheitsaugen sind nichts für Kinder unter drei Jahren. Für kleine Kinder die Augen stattdessen mit Garn aufsticken und auf Draht in den Flügeln verzichten.</li>
-    </ul>
+    <h3 style="margin-top:0">Bevor du anfängst</h3>
+    <p>Alle runden Teile häkelst du in Spiralrunden, also ohne Kettmasche am Ende der Runde. Steck einen Maschenmarkierer in die erste Masche jeder Runde und zieh ihn Runde für Runde mit nach oben, das erspart dir das Zählen. Und häkle fest. Bei Amigurumi darf keine Füllwatte durchscheinen, und ein fester Stoff hält auch die Flügel in Form. Ganz ohne Draht.</p>
+    <p>Eine Maschenprobe brauchst du nicht. Mit dickerem Garn und passender Nadel wird Rubi einfach größer, mit dünnerem kleiner, die Anleitung bleibt dieselbe.</p>
+    <p>Eine Zunahme sind zwei feste Maschen in dieselbe Masche. Abnahmen häkelst du am besten unsichtbar: nur in die vorderen Maschenglieder der nächsten beiden Maschen einstechen, Faden holen und beide Schlingen zusammen abmaschen. So entstehen an den Abnahmen keine Löcher, durch die die Watte schaut.</p>
+    <p>Bei den Teilen in Reihen zählt die Wende-Luftmasche nicht als Masche. Stimmt die Maschenzahl in der eckigen Klammer einmal nicht, ribbel die Reihe lieber gleich auf. Drei Reihen später ist es doppelt so ärgerlich.</p>
+    <p>Sicherheitsaugen sind nichts für Kinder unter drei Jahren. Für die Kleinen stickst du die Augen mit schwarzem und rotem Garn auf.</p>
   </div>
 
-  <h2 id="koerper">1 · Kopf und Körper</h2>
+  <h2 id="kopf">1 · Kopf</h2>
   <div class="karte">
-    <p><span class="farbe schwarz"></span>Schwarz · in Spiralrunden · in einem Stück von oben (Kopf) nach unten. Die Augen werden nach Rd 17 eingesetzt.</p>
-    <ol class="runden" aria-label="Kopf und Körper – Runden">
+    <p><span class="farbe schwarz"></span>Schwarz, in Spiralrunden, von oben nach unten. Rd 1 ist der Scheitel. Die Augen kommen nach Rd 18 hinein, solange die Öffnung noch groß genug ist, um die Sicherungen von innen anzudrücken.</p>
+    <ol class="runden" aria-label="Kopf – Runden">
       <li class="rd"><label><input type="checkbox" id="k01"><b>Rd 1</b><span>6 fM in den MR</span><em>[6]</em></label></li>
       <li class="rd"><label><input type="checkbox" id="k02"><b>Rd 2</b><span>6 zun</span><em>[12]</em></label></li>
       <li class="rd"><label><input type="checkbox" id="k03"><b>Rd 3</b><span>(1 fM, zun) ×6</span><em>[18]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="k04"><b>Rd 4</b><span>(2 fM, zun) ×6</span><em>[24]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="k04"><b>Rd 4</b><span>(1 fM, zun, 1 fM) ×6</span><em>[24]</em></label></li>
       <li class="rd"><label><input type="checkbox" id="k05"><b>Rd 5</b><span>(3 fM, zun) ×6</span><em>[30]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="k06"><b>Rd 6</b><span>(4 fM, zun) ×6</span><em>[36]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="k06"><b>Rd 6</b><span>(2 fM, zun, 2 fM) ×6</span><em>[36]</em></label></li>
       <li class="rd"><label><input type="checkbox" id="k07"><b>Rd 7</b><span>(5 fM, zun) ×6</span><em>[42]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="k08"><b>Rd 8–15</b><span>42 fM – 8 Runden ohne Veränderung</span><em>[42]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="k16"><b>Rd 16</b><span>(5 fM, abn) ×6</span><em>[36]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="k17"><b>Rd 17</b><span>(4 fM, abn) ×6</span><em>[30]</em></label></li>
-      <li class="hinweis"><b>Jetzt Augen einsetzen:</b> zwischen Rd 11 und Rd 12 mit 8 Maschen Abstand. Erst das Sicherheitsauge durch die Mitte eines roten Augenrings (Teil 2) stecken, dann durch den Körper und die Sicherung von innen aufdrücken. Anschließend Mund und Zähnchen sticken (siehe Fertigstellung) – solange der Körper offen ist, lassen sich die Fäden innen bequem vernähen. Dann den Körper gut füllen.</li>
-      <li class="rd"><label><input type="checkbox" id="k18"><b>Rd 18</b><span>(3 fM, abn) ×6</span><em>[24]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="k19"><b>Rd 19</b><span>(2 fM, abn) ×6</span><em>[18]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="k20"><b>Rd 20</b><span>(1 fM, abn) ×6 – fest nachfüllen</span><em>[12]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="k21"><b>Rd 21</b><span>6 abn</span><em>[6]</em></label></li>
-      <li class="hinweis">Faden abschneiden, mit der Stopfnadel durch die vorderen Maschenglieder der letzten 6 Maschen fädeln, zuziehen und den Faden im Körper vernähen.</li>
+      <li class="rd"><label><input type="checkbox" id="k08"><b>Rd 8</b><span>(3 fM, zun, 3 fM) ×6</span><em>[48]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="k09"><b>Rd 9–16</b><span>48 fM (8 Runden ohne Veränderung)</span><em>[48]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="k17"><b>Rd 17</b><span>(6 fM, abn) ×6</span><em>[42]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="k18"><b>Rd 18</b><span>(5 fM, abn) ×6</span><em>[36]</em></label></li>
+      <li class="hinweis">Augen einsetzen: zwischen Rd 12 und 13, mit 7 Maschen Abstand zwischen den beiden Stiften. Erst nur hineinstecken und von vorn anschauen. Weiter auseinander wirkt Rubi erstaunt, enger zusammen eher grimmig. Wenn der Blick passt, die Sicherungen von innen aufdrücken. Die gehen nie wieder ab, also lieber einmal mehr hinschauen. Dann die Nase sticken (siehe unten) und den Kopf fest füllen, in kleinen Portionen, sonst wird er beulig.</li>
+      <li class="rd"><label><input type="checkbox" id="k19"><b>Rd 19</b><span>(4 fM, abn) ×6</span><em>[30]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="k20"><b>Rd 20</b><span>(3 fM, abn) ×6</span><em>[24]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="k21"><b>Rd 21</b><span>(2 fM, abn) ×6 (nachfüllen)</span><em>[18]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="k22"><b>Rd 22</b><span>(1 fM, abn) ×6</span><em>[12]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="k23"><b>Rd 23</b><span>6 abn</span><em>[6]</em></label></li>
+      <li class="hinweis">Faden abschneiden, mit der Stopfnadel durch die vorderen Maschenglieder der letzten 6 Maschen fädeln, zuziehen und den Faden im Kopf versenken.</li>
     </ol>
+    <h3>Die Nase</h3>
+    <p>Die Nase ist ein kleines rotes Dreieck mit der Spitze nach unten, mittig zwischen den Augen. Stick mit Rot zuerst waagerechte Stiche über 3 Maschen auf Höhe von Rd 13, darunter über 2 Maschen auf Rd 14 und zuletzt einen kurzen Stich auf Rd 15. Die Stiche dicht nebeneinander legen, bis kein Schwarz mehr durchblitzt. Zwei Lagen sind in Ordnung, die Nase darf ruhig ein wenig hervorstehen. Einen Mund bekommt Rubi nicht. Mit den großen Augen braucht sie keinen.</p>
   </div>
 
-  <h2 id="augen">2 · Augenringe</h2>
+  <h2 id="koerper">2 · Körper</h2>
   <div class="karte">
-    <p><span class="farbe rot"></span>Rot · 2 Stück · kleine Kreise, durch die die Sicherheitsaugen gesteckt werden. Wer rote Sicherheitsaugen verwendet, kann diesen Teil weglassen.</p>
-    <ol class="runden" aria-label="Augenringe – Runden">
-      <li class="rd"><label><input type="checkbox" id="a01"><b>Rd 1</b><span>8 fM in den MR, Ring fest zuziehen, mit 1 Km in die erste fM schließen</span><em>[8]</em></label></li>
-      <li class="hinweis">Faden abschneiden und vernähen. Das Loch in der Mitte bleibt offen – hier kommt der Stift des Sicherheitsauges durch. Nach dem Einsetzen den Ring bei Bedarf mit zwei, drei Stichen am Körper fixieren.</li>
+    <p><span class="farbe schwarz"></span>Schwarz, in Spiralrunden, von unten nach oben. Rd 1 ist der Boden. Oben bleibt der Körper offen, dort wird später der Kopf angenäht.</p>
+    <ol class="runden" aria-label="Körper – Runden">
+      <li class="rd"><label><input type="checkbox" id="b01"><b>Rd 1</b><span>6 fM in den MR</span><em>[6]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="b02"><b>Rd 2</b><span>6 zun</span><em>[12]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="b03"><b>Rd 3</b><span>(1 fM, zun) ×6</span><em>[18]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="b04"><b>Rd 4</b><span>(1 fM, zun, 1 fM) ×6</span><em>[24]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="b05"><b>Rd 5</b><span>(3 fM, zun) ×6</span><em>[30]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="b06"><b>Rd 6</b><span>(2 fM, zun, 2 fM) ×6</span><em>[36]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="b07"><b>Rd 7</b><span>(5 fM, zun) ×6</span><em>[42]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="b08"><b>Rd 8–12</b><span>42 fM (5 Runden ohne Veränderung)</span><em>[42]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="b13"><b>Rd 13</b><span>(5 fM, abn) ×6</span><em>[36]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="b14"><b>Rd 14</b><span>(4 fM, abn) ×6</span><em>[30]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="b15"><b>Rd 15</b><span>(3 fM, abn) ×6</span><em>[24]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="b16"><b>Rd 16</b><span>(2 fM, abn) ×6</span><em>[18]</em></label></li>
+      <li class="hinweis">Faden abschneiden, etwa 40 cm zum Annähen hängen lassen. Den Körper fest füllen, besonders den Boden, damit Rubi später gerade sitzt und nicht nach hinten kippt.</li>
     </ol>
   </div>
 
   <h2 id="ohren">3 · Ohren</h2>
   <div class="karte">
-    <p><span class="farbe schwarz"></span>Außenohr: Schwarz · 2 Stück · in Spiralrunden · nicht füllen.</p>
-    <ol class="runden" aria-label="Außenohr – Runden">
-      <li class="rd"><label><input type="checkbox" id="o01"><b>Rd 1</b><span>4 fM in den MR</span><em>[4]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="o02"><b>Rd 2</b><span>(1 fM, zun) ×2</span><em>[6]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="o03"><b>Rd 3</b><span>(2 fM, zun) ×2</span><em>[8]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="o04"><b>Rd 4</b><span>(3 fM, zun) ×2</span><em>[10]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="o05"><b>Rd 5</b><span>(4 fM, zun) ×2</span><em>[12]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="o06"><b>Rd 6</b><span>(5 fM, zun) ×2</span><em>[14]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="o07"><b>Rd 7</b><span>14 fM</span><em>[14]</em></label></li>
-      <li class="hinweis">Faden abschneiden, ein langes Ende zum Annähen lassen. Das Ohr flach drücken (7 Maschen breit).</li>
-    </ol>
-    <p style="margin-top:16px"><span class="farbe rot"></span>Innenohr: Rot · 2 Stück · in Reihen · ein kleines Dreieck von der Spitze zur Basis.</p>
+    <p><span class="farbe rot"></span><span class="farbe schwarz"></span>Rot und Schwarz, 2 Stück. Zuerst ein rotes Blatt in Reihen, dann einmal mit Schwarz außen herum. So entsteht der schmale dunkle Rand, ohne dass du etwas aufnähen musst.</p>
     <ol class="runden" aria-label="Innenohr – Reihen">
-      <li class="rd"><label><input type="checkbox" id="i01"><b>R 1</b><span>2 Lm, 1 fM in die 2. Lm ab Nadel</span><em>[1]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="i02"><b>R 2</b><span>1 Lm, wenden, 2 fM in die fM</span><em>[2]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="i03"><b>R 3</b><span>1 Lm, wenden, zun, zun</span><em>[4]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="i04"><b>R 4</b><span>1 Lm, wenden, zun, 2 fM, zun</span><em>[6]</em></label></li>
-      <li class="hinweis">Faden abschneiden, langes Ende lassen. Das rote Dreieck mittig auf die Vorderseite des schwarzen Ohres nähen, Spitze nach oben. Schneller geht es, wenn du das Innenohr stattdessen mit rotem Garn im Plattstich aufstickst.</li>
+      <li class="rd"><label><input type="checkbox" id="o01"><b>R 1</b><span>4 Lm, 1 fM in die 2. Lm ab Nadel, 2 fM</span><em>[3]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="o02"><b>R 2</b><span>1 Lm, wenden, zun, 1 fM, zun</span><em>[5]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="o03"><b>R 3–6</b><span>1 Lm, wenden, 5 fM (4 Reihen)</span><em>[5]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="o07"><b>R 7</b><span>1 Lm, wenden, abn, 1 fM, abn</span><em>[3]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="o08"><b>R 8</b><span>1 Lm, wenden, 3 fM</span><em>[3]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="o09"><b>R 9</b><span>1 Lm, wenden, abn, 1 fM</span><em>[2]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="o10"><b>R 10</b><span>1 Lm, wenden, abn</span><em>[1]</em></label></li>
+      <li class="hinweis">Faden abschneiden und vernähen. Das rote Blatt ist jetzt etwa 3,5 cm hoch.</li>
+      <li class="rd"><label><input type="checkbox" id="o11"><b>Rand</b><span><span class="farbe schwarz"></span>Schwarz an der rechten unteren Ecke anschlingen, 1 fM in jedes Reihenende die Seite hinauf, 3 fM in die Spitze, 1 fM in jedes Reihenende wieder hinunter, unten 1 fM in jede Lm der Anfangskette, mit 1 Km in die erste fM schließen</span><em>[ca. 27]</em></label></li>
+      <li class="hinweis">Faden abschneiden, ein langes Ende zum Annähen lassen. Die Maschenzahl muss hier nicht auf die Masche stimmen. Wichtig ist, dass der Rand flach liegt: Wellt er sich, waren es zu viele Maschen, zieht er das Blatt zusammen, zu wenige. An den Abnahmestufen einfach je 1 fM häkeln, der Rand glättet sie.</li>
     </ol>
+    <figure class="ohr">
+      <svg class="skizze" viewBox="0 0 330 178" role="img" aria-labelledby="skizze-ohr-titel">
+        <title id="skizze-ohr-titel">Skizze des Ohrs: links das flache Blatt mit rotem Innenohr und schwarzem Rand, rechts das Ohr mit zur Muschel gefalteter Basis</title>
+        <path d="M44 132 Q30 78 72 16 Q114 78 100 132 Z" fill="#1c1a22" stroke="#5a5468" stroke-width="1.5"/>
+        <path d="M54 124 Q44 78 72 30 Q100 78 90 124 Z" fill="#d7263d"/>
+        <path d="M44 134 Q60 150 72 146 M100 134 Q84 150 72 146" fill="none" class="linie" stroke-width="1.2" stroke-dasharray="3 3"/>
+        <path d="M68 141 L72 147 L77 142" fill="none" class="linie" stroke-width="1.2"/>
+        <text x="72" y="12" font-size="10.5" text-anchor="middle" class="mattlabel">R 10 = Spitze, 3 fM im Rand</text>
+        <text x="20" y="80" font-size="10.5" text-anchor="middle" class="mattlabel" transform="rotate(-90 20 80)">1 fM je Reihenende</text>
+        <text x="72" y="170" font-size="10.5" text-anchor="middle" class="mattlabel">R 1: Ecken nach hinten zusammenlegen</text>
+        <path d="M150 80 L182 80 M176 75 L182 80 L176 85" fill="none" class="linie" stroke-width="1.4"/>
+        <path d="M228 132 Q200 80 244 16 Q288 80 260 132 Q244 122 228 132 Z" fill="#1c1a22" stroke="#5a5468" stroke-width="1.5"/>
+        <path d="M236 122 Q214 80 244 30 Q274 80 252 122 Q244 114 236 122 Z" fill="#d7263d"/>
+        <text x="244" y="170" font-size="10.5" text-anchor="middle" class="mattlabel">gefaltet: eine kleine Muschel</text>
+      </svg>
+      <figcaption>Das flache Ohr und das gefaltete Ohr. Die beiden unteren Ecken kommen hinten zusammen, dadurch wölbt sich das Ohr wie eine Muschel.</figcaption>
+    </figure>
   </div>
 
   <h2 id="fluegel">4 · Flügel</h2>
   <div class="karte">
-    <p><span class="farbe schwarz"></span><span class="farbe rot"></span>Schwarz mit roter Zackenkante · 2 Stück · in Reihen. Der Flügel ist ein flacher Fächer: In jeder Reihe werden 2 Maschen zugenommen, so entsteht ein Kreisausschnitt. Die Zackenkante in Reihe 15 bildet die typischen Flügelspitzen.</p>
+    <p><span class="farbe rot"></span><span class="farbe schwarz"></span>Rot mit schwarzem Rand, 2 Stück. Der Flügel ist ein Drittelkreis in Reihen, in jeder Reihe kommen zwei Maschen dazu. Die Zunahmen sitzen im ersten und im dritten Viertel der Reihe, dadurch wird der Fächer rund und bekommt keine Ecke in der Mitte. R 13 ist die Zackenreihe: hohe Stäbchen an den Spitzen, Kettmaschen in den Tälern. Sie ist die einzige Reihe in der ganzen Anleitung, in der etwas anderes als feste Maschen vorkommt. Danach kannst du wieder abschalten.</p>
     <ol class="runden" aria-label="Flügel – Reihen">
-      <li class="rd"><label><input type="checkbox" id="f01"><b>R 1</b><span>2 Lm, 2 fM in die 2. Lm ab Nadel</span><em>[2]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="f02"><b>R 2</b><span>1 Lm, wenden, 2 zun</span><em>[4]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="f03"><b>R 3</b><span>1 Lm, wenden, (1 fM, zun) ×2</span><em>[6]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="f04"><b>R 4</b><span>1 Lm, wenden, (2 fM, zun) ×2</span><em>[8]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="f05"><b>R 5</b><span>1 Lm, wenden, (3 fM, zun) ×2</span><em>[10]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="f06"><b>R 6</b><span>1 Lm, wenden, (4 fM, zun) ×2</span><em>[12]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="f07"><b>R 7</b><span>1 Lm, wenden, (5 fM, zun) ×2</span><em>[14]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="f08"><b>R 8</b><span>1 Lm, wenden, (6 fM, zun) ×2</span><em>[16]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="f09"><b>R 9</b><span>1 Lm, wenden, (7 fM, zun) ×2</span><em>[18]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="f10"><b>R 10</b><span>1 Lm, wenden, (8 fM, zun) ×2</span><em>[20]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="f11"><b>R 11</b><span>1 Lm, wenden, (9 fM, zun) ×2</span><em>[22]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="f12"><b>R 12</b><span>1 Lm, wenden, (10 fM, zun) ×2</span><em>[24]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="f13"><b>R 13</b><span>1 Lm, wenden, (11 fM, zun) ×2</span><em>[26]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="f14"><b>R 14</b><span>1 Lm, wenden, (12 fM, zun) ×2 – in der letzten Masche zu Rot wechseln</span><em>[28]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="f15"><b>R 15</b><span><span class="farbe rot"></span>Rot, Zackenkante: wenden, 4 Lm (zählen als 1 DStb), 1 Stb, 1 hStb, 2 fM, 1 hStb, 1 Stb, dann (1 DStb, 1 Stb, 1 hStb, 2 fM, 1 hStb, 1 Stb) ×3</span><em>[28 · 4 Zacken]</em></label></li>
-      <li class="hinweis">Faden abschneiden und vernähen. Die hohen Doppelstäbchen bilden die vier Zacken, die festen Maschen dazwischen die Täler. Die Ecke, an der Reihe 15 <b>beginnt</b> (4 Lm), ist die Flügelspitze; die Ecke, an der sie <b>endet</b>, kommt an den Körper. Den zweiten Flügel genauso häkeln und beim Annähen spiegelverkehrt anlegen, damit bei beiden dieselbe Seite nach vorn zeigt.</li>
+      <li class="rd"><label><input type="checkbox" id="f01"><b>R 1</b><span>4 fM in den MR, Ring zuziehen, aber nicht schließen</span><em>[4]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="f02"><b>R 2</b><span>1 Lm, wenden, (zun, 1 fM) ×2</span><em>[6]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="f03"><b>R 3</b><span>1 Lm, wenden, (1 fM, zun, 1 fM) ×2</span><em>[8]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="f04"><b>R 4</b><span>1 Lm, wenden, (1 fM, zun, 2 fM) ×2</span><em>[10]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="f05"><b>R 5</b><span>1 Lm, wenden, (2 fM, zun, 2 fM) ×2</span><em>[12]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="f06"><b>R 6</b><span>1 Lm, wenden, (2 fM, zun, 3 fM) ×2</span><em>[14]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="f07"><b>R 7</b><span>1 Lm, wenden, (3 fM, zun, 3 fM) ×2</span><em>[16]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="f08"><b>R 8</b><span>1 Lm, wenden, (3 fM, zun, 4 fM) ×2</span><em>[18]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="f09"><b>R 9</b><span>1 Lm, wenden, (4 fM, zun, 4 fM) ×2</span><em>[20]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="f10"><b>R 10</b><span>1 Lm, wenden, (4 fM, zun, 5 fM) ×2</span><em>[22]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="f11"><b>R 11</b><span>1 Lm, wenden, (5 fM, zun, 5 fM) ×2</span><em>[24]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="f12"><b>R 12</b><span>1 Lm, wenden, (5 fM, zun, 6 fM) ×2</span><em>[26]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="f13"><b>R 13</b><span>Zackenreihe: wenden, 4 Lm (zählen als 1 DStb), (1 Stb, 1 hStb, 1 fM, 1 Km, 1 fM, 1 hStb, 1 Stb, 1 DStb) ×2, 1 Stb, 1 hStb, 7 fM</span><em>[26]</em></label></li>
+      <li class="hinweis">Die 4 Lm am Anfang sind die Flügelspitze. Die beiden anderen DStb sind die Spitzen der mittleren und der unteren Zacke, und die 7 fM am Ende bilden die Kante, die später am Körper anliegt. Faden abschneiden und vernähen.</li>
+      <li class="rd"><label><input type="checkbox" id="f14"><b>Rand</b><span><span class="farbe schwarz"></span>Schwarz an der Körperecke anschlingen, das ist die letzte M der Zackenreihe. 1 fM in jede M der Zackenreihe entlang, in jede der drei Zackenspitzen 2 fM [29], um die Flügelspitze herum und die Vorderkante hinunter, 1 fM in jedes Reihenende [41], 3 fM in den MR [44], die Armkante wieder hinauf, 1 fM in jedes Reihenende [56], mit 1 Km in die erste fM schließen</span><em>[ca. 56]</em></label></li>
+      <li class="hinweis">Faden abschneiden, etwa 30 cm zum Annähen lassen. Die genaue Zahl ist auch hier Nebensache, Hauptsache der Rand liegt flach. In den Tälern der Zackenreihe darf er leicht spannen, das zieht die Bögen schön nach innen.</li>
     </ol>
+
+    <h3>Die Fingerlinien</h3>
+    <p>Zwei schwarze Linien laufen vom Magischen Ring zu den Zackenspitzen, die dritte ist die Vorderkante, und die ist ja schon schwarz. Die Linien werden als Kettmaschen auf den Stoff gehäkelt. Leg den schwarzen Faden hinter den Flügel, stich die Nadel von vorn in den MR und hol eine Schlinge nach vorn. Dann immer eine Reihe weiter einstechen, wieder eine Schlinge holen und durch die Schlinge auf der Nadel ziehen. So wandert eine Kette über den Stoff, Reihe für Reihe, bis zur Spitze. Die erste Linie endet an der mittleren Zacke, die zweite an der unteren. Zum Schluss den Faden nach hinten holen und vernähen. Die Kette darf nicht ziehen, sonst wölbt sich der Flügel. Lieber etwas locker.</p>
+
+    <h3>Das Handgelenk</h3>
+    <p><span class="farbe schwarz"></span>Schwarz, 2 Stück. Ein Kügelchen, kaum größer als eine Erbse.</p>
+    <ol class="runden" aria-label="Handgelenk – Runden">
+      <li class="rd"><label><input type="checkbox" id="h01"><b>Rd 1</b><span>6 fM in den MR</span><em>[6]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="h02"><b>Rd 2</b><span>6 fM</span><em>[6]</em></label></li>
+      <li class="hinweis">Faden abschneiden, mit der Nadel durch die 6 Maschen fädeln, die Fadenenden hineinstopfen und zuziehen. Der Knubbel kommt auf die Ecke am MR, dort, wo die Fingerlinien zusammenlaufen.</li>
+    </ol>
+    <p>Den zweiten Flügel genauso häkeln, auch den Rand. Nur die Fingerlinien kommen bei ihm auf die andere Stoffseite, dann liegen sie bei beiden Flügeln vorn und die Spitzen zeigen nach außen.</p>
+
     <figure>
-      <svg class="skizze" viewBox="0 0 484 322" role="img" aria-labelledby="skizze-fluegel-titel">
-        <title id="skizze-fluegel-titel">Skizze des Flügels: ein Kreisausschnitt aus 14 Reihen, außen die rote Zackenkante mit vier Spitzen</title>
-        <path d="M130 60 L340 60 A210 210 0 0 1 25 241.9 Z" fill="#1c1a22" stroke="#4a4455" stroke-width="1.5"/>
-        <path d="M145 60A15 15 0 0 1 122.5 73M160 60A30 30 0 0 1 115 86M175 60A45 45 0 0 1 107.5 99M190 60A60 60 0 0 1 100 112M205 60A75 75 0 0 1 92.5 125M220 60A90 90 0 0 1 85 137.9M235 60A105 105 0 0 1 77.5 150.9M250 60A120 120 0 0 1 70 163.9M265 60A135 135 0 0 1 62.5 176.9M280 60A150 150 0 0 1 55 189.9M295 60A165 165 0 0 1 47.5 202.9M310 60A180 180 0 0 1 40 215.9M325 60A195 195 0 0 1 32.5 228.9" fill="none" stroke="#4a4455" stroke-width="1"/>
-        <path d="M362 60 C332.9 95.8 323.6 130.5 330.9 176 C287.8 192.4 262.4 217.8 246 260.9 C200.5 253.6 165.8 262.9 130 292 C94.2 262.9 59.5 253.6 19 252.3 L25 241.9 A210 210 0 0 0 340 60 Z" fill="#d7263d" fill-opacity=".28"/>
-        <path d="M362 60 C332.9 95.8 323.6 130.5 330.9 176 C287.8 192.4 262.4 217.8 246 260.9 C200.5 253.6 165.8 262.9 130 292 C94.2 262.9 59.5 253.6 19 252.3" fill="none" stroke="#d7263d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="130" cy="60" r="3.5" fill="var(--tinte)"/>
-        <text x="122" y="52" font-size="12" text-anchor="end">R 1</text>
-        <text x="235" y="50" font-size="12" text-anchor="middle" class="mattlabel">Oberkante des Flügels (Arm)</text>
-        <text x="366" y="58" font-size="12" class="rotlabel">Flügelspitze</text>
-        <text x="366" y="73" font-size="10.5" class="mattlabel">R 15 beginnt hier</text>
-        <text x="264" y="196" font-size="11" text-anchor="middle" class="mattlabel" transform="rotate(-45 264 196)">R 14 · 28 M</text>
-        <text x="60" y="150" font-size="12" text-anchor="middle" class="mattlabel" transform="rotate(-60 60 150)">Körperkante – annähen</text>
-        <text x="341" y="184" font-size="11" class="rotlabel">DStb = Zacke</text>
-        <text x="298" y="236" font-size="11" class="rotlabel">2 fM = Tal</text>
-        <line x1="296" y1="231" x2="284" y2="215" class="linie" stroke-width="1"/>
-        <text x="8" y="297" font-size="10.5" class="mattlabel">Körperecke –</text>
-        <text x="8" y="310" font-size="10.5" class="mattlabel">R 15 endet hier</text>
-        <text x="285" y="318" font-size="12" text-anchor="middle" class="rotlabel">R 15: rote Zackenkante mit 4 Zacken</text>
+      <svg class="skizze" viewBox="0 0 480 330" role="img" aria-labelledby="skizze-fluegel-titel">
+        <title id="skizze-fluegel-titel">Skizze des Flügels: ein Drittelkreis aus 13 Reihen mit drei Zacken, schwarzem Rand, zwei Fingerlinien und dem Knubbel am Magischen Ring; die letzte Kante wird an den Körper genäht</title>
+        <path d="M210 48 L435 96 A230 230 0 0 1 351.6 229.2 Q268.3 227.4 202 277.8 Q139.4 222.9 56.1 218.9 Z" fill="#d7263d"/>
+        <path d="M227.3 51.7A17.7 17.7 0 0 1 198.2 61.2M244.6 55.4A35.4 35.4 0 0 1 186.3 74.3M262 59A53.1 53.1 0 0 1 174.5 87.5M279.3 62.7A70.8 70.8 0 0 1 162.6 100.6M296.6 66.4A88.5 88.5 0 0 1 150.8 113.8M313.9 70.1A106.2 106.2 0 0 1 138.9 126.9M331.2 73.8A123.8 123.8 0 0 1 127.1 140M348.5 77.5A141.5 141.5 0 0 1 115.2 153.2M365.9 81.2A159.2 159.2 0 0 1 103.4 166.3M383.2 84.9A176.9 176.9 0 0 1 91.5 179.5M400.5 88.6A194.6 194.6 0 0 1 79.7 192.6M417.8 92.3A212.3 212.3 0 0 1 67.8 205.8" fill="none" stroke="#a4172a" stroke-width="1"/>
+        <path d="M210 48 L435 96 A230 230 0 0 1 351.6 229.2 Q268.3 227.4 202 277.8 Q139.4 222.9 56.1 218.9 Z" fill="none" stroke="#1c1a22" stroke-width="7" stroke-linejoin="round"/>
+        <path d="M210 48 L435 96 A230 230 0 0 1 351.6 229.2 Q268.3 227.4 202 277.8 Q139.4 222.9 56.1 218.9 Z" fill="none" stroke="#5a5468" stroke-width="1" stroke-linejoin="round"/>
+        <path d="M210 48 L202 277.8 M210 48 L351.6 229.2" fill="none" stroke="#1c1a22" stroke-width="6" stroke-linecap="round"/>
+        <path d="M435 96 A230 230 0 0 1 351.6 229.2" fill="none" class="hell" stroke-width="2" stroke-dasharray="6 5"/>
+        <circle cx="210" cy="48" r="10" fill="#1c1a22" stroke="#5a5468" stroke-width="1.5"/>
+        <text x="222" y="32" font-size="11.5" class="rotlabel">MR = Handgelenk, hier sitzt der Knubbel</text>
+        <text x="330" y="60" font-size="11" class="mattlabel" transform="rotate(12 330 60)">Armkante</text>
+        <text x="120" y="120" font-size="11" class="mattlabel" transform="rotate(48 120 120)">Vorderkante = 1. Finger</text>
+        <text x="44" y="236" font-size="11.5" class="rotlabel">Flügelspitze</text>
+        <text x="44" y="250" font-size="10.5" class="mattlabel">R 13 beginnt hier (4 Lm)</text>
+        <text x="202" y="296" font-size="11.5" text-anchor="middle" class="rotlabel">mittlere Zacke</text>
+        <text x="360" y="252" font-size="11.5" class="rotlabel">untere Zacke</text>
+        <text x="416" y="176" font-size="11" text-anchor="middle" transform="rotate(-58 416 176)">diese Kante an den Körper</text>
+        <text x="258" y="150" font-size="11" text-anchor="middle" transform="rotate(52 258 150)">Fingerlinien: Km auf dem Stoff</text>
+        <text x="178" y="44" font-size="10" text-anchor="end" class="mattlabel">R 1</text>
+        <text x="70" y="207" font-size="10" class="mattlabel">R 12</text>
+        <text x="240" y="318" font-size="11.5" text-anchor="middle" class="mattlabel">Flügel flach liegend, Vorderseite. Beim zweiten Flügel ist es spiegelverkehrt.</text>
       </svg>
-      <figcaption>So sieht der fertige Flügel flach liegend aus. Die gerade Kante zwischen R 1 und der Körperecke wird seitlich am Körper angenäht, die Oberkante zeigt schräg nach oben-außen.</figcaption>
+      <figcaption>Der fertige Flügel von vorn. Die gestrichelte Kante wird am Körper angenäht, die Armkante steigt schräg nach oben zum Handgelenk.</figcaption>
     </figure>
   </div>
 
   <h2 id="fuesse">5 · Füße</h2>
   <div class="karte">
-    <p><span class="farbe rot"></span>Rot · 2 Stück · in Spiralrunden · nicht füllen.</p>
+    <p><span class="farbe schwarz"></span>Schwarz, 2 Stück. Zwei kleine Bohnen.</p>
     <ol class="runden" aria-label="Füße – Runden">
-      <li class="rd"><label><input type="checkbox" id="u01"><b>Rd 1</b><span>5 fM in den MR</span><em>[5]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="u02"><b>Rd 2–3</b><span>5 fM – 2 Runden</span><em>[5]</em></label></li>
-      <li class="hinweis">Faden abschneiden, langes Ende zum Annähen lassen.</li>
+      <li class="rd"><label><input type="checkbox" id="u01"><b>Rd 1</b><span>6 fM in den MR</span><em>[6]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="u02"><b>Rd 2</b><span>(1 fM, zun) ×3</span><em>[9]</em></label></li>
+      <li class="rd"><label><input type="checkbox" id="u03"><b>Rd 3–4</b><span>9 fM (2 Runden)</span><em>[9]</em></label></li>
+      <li class="hinweis">Faden abschneiden, langes Ende lassen. Eine Prise Watte hinein, dann die Öffnung flach zusammendrücken. So entsteht die Bohnenform.</li>
     </ol>
   </div>
 
-  <h2 id="schleife">6 · Schleife (optional)</h2>
+  <h2 id="mond">6 · Mond</h2>
   <div class="karte">
-    <p><span class="farbe rot"></span>Rot · 1 Stück · in Reihen. Ein kleines Rechteck, das in der Mitte zusammengerafft wird.</p>
-    <ol class="runden" aria-label="Schleife – Reihen">
-      <li class="rd"><label><input type="checkbox" id="s01"><b>R 1</b><span>10 Lm, 1 fM in die 2. Lm ab Nadel und in jede weitere Lm</span><em>[9]</em></label></li>
-      <li class="rd"><label><input type="checkbox" id="s02"><b>R 2–4</b><span>1 Lm, wenden, 9 fM – 3 Reihen</span><em>[9]</em></label></li>
-      <li class="hinweis">Faden abschneiden, langes Ende lassen. Das Rechteck in der Mitte zusammenraffen, den Faden mehrmals fest um die Mitte wickeln und vernähen. Die Schleife unter dem Kinn (etwa Rd 16) oder seitlich an einem Ohr annähen.</li>
+    <p><span class="farbe rot"></span>Rot, 1 Stück. Die Sichel biegt sich von selbst, weil auf der einen Seite der Luftmaschenkette fast doppelt so viele Maschen stehen wie Luftmaschen.</p>
+    <ol class="runden" aria-label="Mond – Reihe">
+      <li class="rd"><label><input type="checkbox" id="m01"><b>R 1</b><span>12 Lm, in die 2. Lm ab Nadel 1 Km, 1 fM, 2 hStb in die nächste Lm, (2 Stb in die nächste Lm) ×5, 2 hStb in die nächste Lm, 1 fM, 1 Km in die letzte Lm</span><em>[18]</em></label></li>
+      <li class="hinweis">Faden abschneiden, langes Ende lassen. Das Stück mit Stecknadeln zur Sichel legen, die Öffnung zeigt nach rechts wie auf dem Foto, und mit kleinen Stichen rundherum auf die Bauchmitte nähen, ungefähr zwischen Rd 6 und Rd 12 des Körpers. Wer lieber stickt, stickt den Mond mit Plattstichen auf. Sieht genauso gut aus.</li>
     </ol>
   </div>
 
-  <h2 id="fertigstellung">7 · Fertigstellung</h2>
+  <h2 id="zusammennaehen">7 · Zusammennähen</h2>
   <div class="karte">
     <ol>
-      <li><b>Augen</b> sitzen bereits zwischen Rd 11 und 12 (8 Maschen Abstand) auf ihren roten Ringen.</li>
-      <li><b>Mund</b>: Mit rotem Garn zwischen Rd 14 und 15 ein kleines Lächeln von etwa 3 Maschen Breite sticken. <b>Zähnchen</b>: Mit weißem Garn zwei kurze senkrechte Stiche direkt unter den Mundwinkeln sticken (je eine Runde lang).</li>
-      <li><b>Ohren</b>: Innenohren aufnähen. Die Ohren mit der Unterkante zwischen Rd 4 und Rd 8 seitlich oben am Kopf annähen, Abstand zwischen den Ohren etwa 4 Maschen. Die Basis dabei leicht bogenförmig nach innen wölben, so entsteht eine Ohrmuschel. Erst mit Stecknadeln fixieren und von vorn prüfen.</li>
-      <li><b>Flügel</b>: Die gerade Körperkante (von R 1 bis zur Körperecke) seitlich und leicht nach hinten versetzt am Körper annähen – von etwa Rd 8 (Schulter) bis Rd 20 (unten). Die Flügelspitze zeigt schräg nach oben-außen, die Zackenkante hängt nach unten. Den zweiten Flügel spiegelverkehrt annähen. Für stellbare Flügel vorher ein Stück Draht entlang der Oberkante einnähen (nicht für kleine Kinder).</li>
-      <li><b>Füße</b>: Die beiden roten Röllchen unten vorn zwischen Rd 19 und 20 annähen, 3 Maschen Abstand.</li>
-      <li><b>Schleife</b> nach Wunsch anbringen, alle Fäden vernähen, Rubi in Form drücken – fertig.</li>
+      <li><b>Kopf und Körper.</b> Den Körper mit der Öffnung nach oben unter den Kopf setzen, etwa auf Rd 20 bis 21 des Kopfes, und mit Stecknadeln fixieren. Der Kopf darf vorn ein Stück überstehen, das macht Rubi pummelig. Mit dem langen Faden des Körpers rundherum nähen, dabei abwechselnd eine Masche der Körperöffnung und eine Masche des Kopfes fassen. Zwischendurch von vorn schauen, ob der Kopf noch gerade sitzt.</li>
+      <li><b>Ohren.</b> Die Basis jedes Ohrs zu einer kleinen Muschel falten: die beiden unteren Ecken nach hinten zusammenlegen und mit zwei Stichen sichern. Die Ohren oben seitlich auf den Kopf stecken, die Basis zwischen Rd 3 und Rd 8, oben etwa 6 Maschen Abstand zwischen den beiden Ohren. Sie zeigen leicht nach außen, nicht kerzengerade nach oben. Erst stecken, von vorn anschauen, dann annähen.</li>
+      <li><b>Flügel.</b> Der Flügel wird schräg angenäht. Die Kante aus den 7 fM plus Rand liegt am Körper: Die Körperecke, also das Ende der Armkante, sitzt hinten oben an der Schulter, etwa auf Rd 14 des Körpers. Die untere Zacke sitzt vorn seitlich, etwa auf Rd 6. Die Armkante steigt dann schräg nach oben, das Handgelenk mit dem Knubbel landet ungefähr auf Höhe der Augen. Beide Flügel stecken, von vorn und von oben prüfen, ob sie gleich hoch sitzen, dann mit dem schwarzen Faden annähen. Die Kante ruhig ein Stück weit um den Rücken herum nähen, dann stehen die Flügel stabil ab.</li>
+      <li><b>Füße.</b> Vorn unten an den Körper, zwischen Rd 3 und Rd 5, mit etwa 4 Maschen Abstand. Sie stehen nach vorn ab wie zwei kleine Stummel.</li>
+      <li>Zum Schluss alle Fäden vernähen und Rubi in Form drücken. Die Ohren ein bisschen zurechtzupfen, die Flügel glattstreichen. Fertig.</li>
     </ol>
     <figure class="platz">
-      <svg class="skizze" viewBox="0 0 412 270" role="img" aria-labelledby="skizze-platz-titel">
-        <title id="skizze-platz-titel">Platzierungsskizze: Ohren Rd 4 bis 8, Augen zwischen Rd 11 und 12, Mund Rd 14 bis 15, Flügel Rd 8 bis 20, Füße Rd 19 bis 20</title>
-        <polygon points="138,110 142,40 180,96" fill="#1c1a22" stroke="#4a4455" stroke-width="1.5" stroke-linejoin="round"/>
-        <polygon points="242,110 238,40 200,96" fill="#1c1a22" stroke="#4a4455" stroke-width="1.5" stroke-linejoin="round"/>
-        <polygon points="146,98 148,62 166,90" fill="#d7263d"/>
-        <polygon points="234,98 232,62 214,90" fill="#d7263d"/>
-        <ellipse cx="190" cy="140" rx="68" ry="88" fill="#1c1a22" stroke="#4a4455" stroke-width="1.5"/>
+      <svg class="skizze" viewBox="-52 0 704 372" role="img" aria-labelledby="skizze-platz-titel">
+        <title id="skizze-platz-titel">Platzierungsskizze von vorn: Ohren Rd 3 bis 8, Augen zwischen Rd 12 und 13, Nase Rd 13 bis 15, Flügel hinten oben auf Rd 14 und vorn unten auf Rd 6 des Körpers, Mond Rd 6 bis 12, Füße Rd 3 bis 5</title>
+        <!-- Flügel (hinter dem Körper) -->
+        <g id="pl-fluegel">
+          <path d="M112 165 L186 232 Q196 264 174 292 Q136 282 104 318 Q71 269 22 262 Z" fill="#d7263d" stroke="#1c1a22" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M112 165 L104 318 M112 165 L174 292" fill="none" stroke="#1c1a22" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="112" cy="165" r="7" fill="#1c1a22" stroke="#5a5468"/>
+        </g>
+        <use href="#pl-fluegel" transform="translate(480 0) scale(-1 1)"/>
+        <!-- Ohren -->
+        <g transform="translate(193 61) rotate(-32)"><path d="M-20 0 Q-24 -46 0 -92 Q24 -46 20 0 Z" fill="#1c1a22" stroke="#5a5468" stroke-width="1.5"/><path d="M-12 -6 Q-15 -46 0 -80 Q15 -46 12 -6 Z" fill="#d7263d"/></g>
+        <g transform="translate(287 61) rotate(32)"><path d="M-20 0 Q-24 -46 0 -92 Q24 -46 20 0 Z" fill="#1c1a22" stroke="#5a5468" stroke-width="1.5"/><path d="M-12 -6 Q-15 -46 0 -80 Q15 -46 12 -6 Z" fill="#d7263d"/></g>
+        <!-- Körper und Kopf -->
+        <ellipse cx="240" cy="268" rx="66" ry="62" fill="#1c1a22" stroke="#5a5468" stroke-width="1.5"/>
+        <circle cx="240" cy="128" r="82" fill="#1c1a22" stroke="#5a5468" stroke-width="1.5"/>
+        <!-- Rundenlinien Kopf -->
         <g class="linie" stroke-width="1" stroke-dasharray="3 3">
-          <line x1="122" y1="77" x2="258" y2="77"/><line x1="122" y1="119" x2="258" y2="119"/>
-          <line x1="122" y1="144" x2="258" y2="144"/><line x1="122" y1="169" x2="258" y2="169"/>
-          <line x1="122" y1="211" x2="258" y2="211"/>
+          <line x1="172" y1="64" x2="308" y2="64"/><line x1="160" y1="99" x2="320" y2="99"/>
+          <line x1="158" y1="131" x2="322" y2="131"/><line x1="160" y1="152" x2="320" y2="152"/>
+          <line x1="176" y1="225" x2="466" y2="225"/><line x1="176" y1="287" x2="466" y2="287"/>
         </g>
-        <circle cx="150" cy="144" r="11" fill="#d7263d"/><circle cx="230" cy="144" r="11" fill="#d7263d"/>
-        <circle cx="150" cy="144" r="6" fill="#0e0c12"/><circle cx="230" cy="144" r="6" fill="#0e0c12"/>
-        <path d="M178 170 Q190 179 202 170" fill="none" stroke="#d7263d" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M183 172 L185 178 L187 172 Z M193 172 L195 178 L197 172 Z" fill="#fff"/>
-        <ellipse cx="176" cy="226" rx="8" ry="5" fill="#d7263d"/><ellipse cx="204" cy="226" rx="8" ry="5" fill="#d7263d"/>
-        <g class="linie" stroke-width="1.2" fill="none">
-          <path d="M118 77 L114 77 L114 119 L118 119"/>
-          <path d="M262 111 L266 111 L266 220 L262 220"/>
+        <!-- Augen, Nase -->
+        <circle cx="212" cy="131" r="11" fill="#d7263d"/><circle cx="268" cy="131" r="11" fill="#d7263d"/>
+        <circle cx="212" cy="131" r="7" fill="#0e0c12"/><circle cx="268" cy="131" r="7" fill="#0e0c12"/>
+        <circle cx="215" cy="128" r="2.2" fill="#fff"/><circle cx="271" cy="128" r="2.2" fill="#fff"/>
+        <path d="M232 137 L248 137 L240 152 Z" fill="#d7263d"/>
+        <!-- Mond -->
+        <path d="M252 236 A30 30 0 1 0 252 288 A22 22 0 1 1 252 236 Z" fill="#d7263d"/>
+        <!-- Füße -->
+        <ellipse cx="216" cy="324" rx="12" ry="8" fill="#1c1a22" stroke="#5a5468"/><ellipse cx="264" cy="324" rx="12" ry="8" fill="#1c1a22" stroke="#5a5468"/>
+        <!-- Beschriftung -->
+        <g class="linie" stroke-width="1.1" fill="none">
+          <path d="M150 64 L150 99 M150 64 L156 64 M150 99 L156 99"/>
         </g>
-        <text x="108" y="102" font-size="11.5" text-anchor="end">Ohren: Rd 4–8</text>
-        <text x="108" y="148" font-size="11.5" text-anchor="end">Augen: Rd 11/12</text>
-        <text x="108" y="173" font-size="11.5" text-anchor="end">Mund: Rd 14/15</text>
-        <text x="108" y="215" font-size="11.5" text-anchor="end">Füße: Rd 19/20</text>
-        <text x="272" y="160" font-size="11.5">Flügel: Rd 8–20</text>
-        <text x="272" y="175" font-size="10" class="mattlabel">seitlich, leicht hinten</text>
-        <text x="272" y="189" font-size="10" class="mattlabel">Spitze nach oben-außen</text>
-        <text x="190" y="258" font-size="11" text-anchor="middle" class="mattlabel">Vorderansicht · Rd 1 ist die Kopfoberseite</text>
+        <text x="142" y="86" font-size="11" text-anchor="end">Ohren: Basis Rd 3–8</text>
+        <text x="142" y="122" font-size="11" text-anchor="end">Augen: zwischen Rd 12 und 13</text>
+        <text x="142" y="140" font-size="11" text-anchor="end">Nase: Rd 13–15</text>
+        <text x="472" y="222" font-size="11">Rd 14: Flügel, Körperecke</text>
+        <text x="472" y="236" font-size="11">hinten oben an der Schulter</text>
+        <text x="472" y="284" font-size="11">Rd 6: Flügel, untere Zacke</text>
+        <text x="472" y="298" font-size="11">vorn seitlich</text>
+        <text x="240" y="352" font-size="11" text-anchor="middle">Mond: Rd 6–12 auf der Bauchmitte · Füße: Rd 3–5, vorn unten</text>
+        <text x="240" y="367" font-size="10.5" text-anchor="middle" class="mattlabel">Vorderansicht. Kopf von oben gezählt, Körper von unten.</text>
       </svg>
-      <figcaption>Platzierung auf einen Blick. Die gestrichelten Linien markieren die genannten Runden von oben gezählt.</figcaption>
+      <figcaption>Platzierung auf einen Blick. Die gestrichelten Linien zeigen die genannten Runden.</figcaption>
     </figure>
   </div>
 
   <h2 id="tipps">Tipps und Varianten</h2>
   <div class="karte">
-    <ul>
-      <li><b>Kopfüber hängend</b>: Eine Schlaufe aus 20 Lm zwischen den Füßen annähen – dann hängt Rubi wie eine echte Fledermaus an Zweig, Lampe oder Fensterkreuz.</li>
-      <li><b>Kürbis-Variante</b>: Orange statt Rot für Innenohren, Zackenkante und Füße – passt zu jeder Halloween-Deko.</li>
-      <li><b>Mini-Rubi als Anhänger</b>: Mit Häkelgarn Stärke 10 und Nadel 1,5 mm wird sie nur etwa 5 cm groß. Eine Schlaufe an Rd 1 macht sie zum Schlüsselanhänger.</li>
-      <li><b>Größer</b>: Mit Garn der Stärke 4–5 mm und Nadel 4 mm entsteht ein Kuscheltier von rund 20 cm Höhe und 45 cm Spannweite.</li>
-      <li><b>Glitzer</b>: Ein dünner roter Metallic-Beilauffaden bei der Zackenkante lässt die Flügel im Kerzenlicht funkeln.</li>
-      <li><b>Zu wenig Kontrast?</b> Wenn die roten Augenringe auf dem schwarzen Körper zu dezent wirken, den Ring auf 12 Maschen vergrößern: Rd 1: 6 fM in den MR, Rd 2: 6 zun, mit Km schließen.</li>
-    </ul>
+    <p>Zum Aufhängen eine Schlaufe aus 25 Lm oben am Kopf zwischen den Ohren annähen. Mit einer Schlaufe zwischen den Füßen hängt Rubi kopfüber, wie eine echte Fledermaus.</p>
+    <p>Mit Garn der Stärke 4 mm und Nadel 3,5 mm wird sie etwa 15 cm hoch. Mit Häkelgarn Stärke 10 und Nadel 1,5 mm passt sie an den Schlüsselbund.</p>
+    <p>Statt Rot geht auch Lila oder Orange. Das Schwarz bleibt, sonst ist es keine Fledermaus mehr.</p>
+    <p>Wer die Flügel stellbar möchte, näht ein Stück Blumendraht entlang der Armkante ein. Nicht bei Kuscheltieren für kleine Kinder.</p>
   </div>
 
   <h2 id="download" class="nur-web">Zum Mitnehmen</h2>
@@ -432,28 +422,20 @@
       <button class="knopf leise" type="button" id="drucken2">Seite drucken</button>
     </div>
     <div class="fortschritt nur-web" style="margin-top:16px">
-      <span id="fortschritt">0 Runden abgehakt</span>
+      <span id="fortschritt">0 Schritte abgehakt</span>
       <button type="button" id="zuruecksetzen">Häkchen zurücksetzen</button>
     </div>
   </div>
 
   <footer>
     <p class="nur-druck">Online-Version mit Runden-Checkliste: judaskokcleri-afk.github.io/fledermaus-haekelanleitung.html</p>
-    © 2026 Malik Enterprises · Anleitung „Fledermaus Rubi“. Für den privaten Gebrauch – fertige Fledermäuse dürfen gern verschenkt oder in kleiner Stückzahl verkauft werden, die Anleitung selbst bitte nicht kopieren oder weiterverkaufen. Diese Seite verwendet keine Cookies; die Häkchen werden nur lokal in deinem Browser gespeichert. <a href="index.html">Zur Startseite</a> · <a href="datenschutz.html">Datenschutz</a>
+    © 2026 Malik Enterprises · Anleitung „Fledermaus Rubi“. Für den privaten Gebrauch. Fertige Fledermäuse dürfen gern verschenkt oder in kleiner Stückzahl verkauft werden, die Anleitung selbst bitte nicht kopieren oder weiterverkaufen. Diese Seite verwendet keine Cookies; die Häkchen werden nur lokal in deinem Browser gespeichert. <a href="index.html">Zur Startseite</a> · <a href="datenschutz.html">Datenschutz</a>
   </footer>
 </main>
 
-<div class="laufschrift unten" role="marquee" aria-label="Laufschrift mit Halloween-Grüßen">
-  <div class="spur">
-    <span>🎃 Happy Halloween<i>✦</i>🦇 Rubi wünscht fröhliches Gruseln<i>✦</i>🕸️ Viel Freude beim Häkeln<i>✦</i>🍬 Süßes oder Saures<i>✦</i>🌙 Eine Fledermaus pro Nacht – mehr braucht kein Fensterbrett<i>✦</i></span>
-    <span aria-hidden="true">🎃 Happy Halloween<i>✦</i>🦇 Rubi wünscht fröhliches Gruseln<i>✦</i>🕸️ Viel Freude beim Häkeln<i>✦</i>🍬 Süßes oder Saures<i>✦</i>🌙 Eine Fledermaus pro Nacht – mehr braucht kein Fensterbrett<i>✦</i></span>
-  </div>
-  <button type="button" aria-label="Laufschrift anhalten" aria-pressed="false">❚❚</button>
-</div>
-
 <script>
 (function(){
-  var SCHLUESSEL='rubi-haekel-fortschritt';
+  var SCHLUESSEL='rubi-haekel-fortschritt-2';
   var kaestchen=Array.prototype.slice.call(document.querySelectorAll('.rd input[type=checkbox]'));
   var stand={};
   try{stand=JSON.parse(localStorage.getItem(SCHLUESSEL)||'{}')||{};}catch(e){stand={};}
@@ -481,15 +463,6 @@
   ['drucken','drucken2'].forEach(function(id){
     var b=document.getElementById(id);
     if(b){b.addEventListener('click',function(){window.print();});}
-  });
-  Array.prototype.forEach.call(document.querySelectorAll('.laufschrift button'),function(knopf){
-    knopf.addEventListener('click',function(){
-      var band=knopf.closest('.laufschrift');
-      var pausiert=band.classList.toggle('pause');
-      knopf.setAttribute('aria-pressed',pausiert?'true':'false');
-      knopf.setAttribute('aria-label',pausiert?'Laufschrift starten':'Laufschrift anhalten');
-      knopf.textContent=pausiert?'▶':'❚❚';
-    });
   });
 })();
 </script>
